@@ -1,0 +1,23 @@
+#!/bin/sh
+
+FILE="/var/log/update_script.log"
+
+echo "***Starting package update prcoess***"
+echo "***Starting package update process***" > ${FILE}
+echo "apt-get -y update" >> ${FILE}
+apt-get -y update >> ${FILE}
+echo "apt-get -y upgrade" >> ${FILE}
+apt-get -y upgrade >> ${FILE}
+echo "chmod +x /home/erika/scripting/02" >> ${FILE}
+chmod +x /home/erika/scripting/02
+echo "crontab -l > mycron" >> ${FILE}
+crontab -l > mycron
+echo "0 4 * * * sh /home/erika/scripting/02 >> mycron" >> ${FILE}
+echo "0 4 * * * sh /home/erika/scripting/02" >> mycron
+echo "crontab mycron" >> ${FILE}
+crontab mycron
+echo "rm mycron" >> ${FILE}
+rm mycron
+echo "***Update successful***" >> ${FILE}
+echo "***Update successful***"
+exit

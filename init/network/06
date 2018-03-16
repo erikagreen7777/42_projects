@@ -1,0 +1,2 @@
+#apparently this question is supposed to be written in my own words, so in order to find the complete path of the file, I already know that it was in /etc/resolv.conf thanks to Google. So the file path is:
+/etc/resolv.conf

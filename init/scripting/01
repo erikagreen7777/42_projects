@@ -1,0 +1,9 @@
+#!/bin/sh
+
+file=/etc/passwd
+
+IFS=':'
+while read -r username password UID GID UIDinfo home command
+do
+	printf "%s:%s:%s\n" $username $UID $home
+done < "$file"

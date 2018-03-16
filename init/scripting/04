@@ -1,0 +1,15 @@
+#!/bin/sh
+
+chmod +x /home/erika/scripting/04
+crontab -l > mycron
+echo "0 0 * * * sh /home/erika/scripting/04 2>&1" >> mycron
+crontab mycron
+rm mycron
+HASH=8f111d100ea459f68d333d63a8ef2205
+CHECKSUM=`md5sum /etc/crontab | grep -om1 "[0-9a-f]\{32\}"`
+if [ "$HASH" = "$CHECKSUM" ]; then
+	echo "OK"
+else
+	echo "Difference Detected"
+	echo "/etc/crontab modified" | mail root@localhost
+fi

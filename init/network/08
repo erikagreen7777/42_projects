@@ -1,0 +1,11 @@
+#I Googled "find the provider of a website", clicked the first link (hostingchecker.com), and entered "slash16.org". It returned the following information:
+#
+#Datacenter: Amazon.com
+#Server IP: 52.84.31.112
+#City: Seattle 52.84.31.112
+#Location: United States of America
+
+#Another way to do it would be to:
+#ping slash16.org
+#and then use that IP address to:
+whois 52.84.245.152

@@ -1,0 +1,1 @@
+The name of the IP address that connects our network to the outside world is: nat (10.90.1.11). NAT, or network address translation, is the answer to the IPv4 number shortage. It allows all of the IP addresses on one large network to be referenced via one address to the outside world. 
